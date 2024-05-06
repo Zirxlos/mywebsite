@@ -17,6 +17,10 @@ body {
     padding: 30px;
 }
 
+section {
+    margin-top: 30px;
+}
+
 #navbar {
     width: 100%;
     border-bottom: 1px solid black;
@@ -45,7 +49,7 @@ p {
     margin: 15px;
 }
 
-@media only screen and (mid-width: 815px) {
+@media only screen and (min-width: 815px) {
     body {
         flex-direction: row;
     }
