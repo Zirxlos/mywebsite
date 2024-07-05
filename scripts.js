@@ -28,20 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
         mainContent.classList.remove('expanded');
     })
 
-
-    // PROBABLY NOT NECESSARY !!!! NEEDS TO BE RETESTED !!!!
     // Handle browser back/forward navigation
     window.addEventListener('popstate', function (event) {
-        const path = event.state ? event.state.path : null;
-        if (!path || path === './index.html') {
-            welcomeScreen.classList.remove('shrunk');
-            mainContent.classList.remove('expanded');
-            iframe.src = '';
-        } else {
-            welcomeScreen.classList.add('shrunk');
-            mainContent.classList.add('expanded');
-            iframe.src = path;
-        }
+        welcomeScreen.classList.remove('shrunk');
+        mainContent.classList.remove('expanded');
+        iframe.src = '';
     });
 
     // Initial page load check
