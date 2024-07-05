@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('popstate', function (event) {
         welcomeScreen.classList.remove('shrunk');
         mainContent.classList.remove('expanded');
-        window.location.replace('index.html');
+        window.location.replace('');
     });
 
     // Initial page load check
