@@ -41,5 +41,5 @@ document.addEventListener("DOMContentLoaded", function () {
         //welcomeScreen.classList.add('shrunk');
         //mainContent.classList.add('expanded');
         //iframe.src = initialPath;
-    }
+    //}
 });
