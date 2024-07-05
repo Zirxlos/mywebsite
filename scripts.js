@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Handle browser back/forward navigation
     window.addEventListener('popstate', function (event) {
+        window.history.pushState({ path: '' }, '', '');;
         welcomeScreen.classList.remove('shrunk');
         mainContent.classList.remove('expanded');
-        window.location.replace('');
     });
 
     // Initial page load check
