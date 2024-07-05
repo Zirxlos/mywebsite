@@ -45,10 +45,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Initial page load check
-    const initialPath = window.location.pathname.split('/').pop();
-    if (initialPath && initialPath !== 'index.html' && initialPath !== '') {
-        welcomeScreen.classList.add('shrunk');
-        mainContent.classList.add('expanded');
-        iframe.src = initialPath;
-    }
+    
 });
