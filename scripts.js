@@ -31,24 +31,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // PROBABLY NOT NECESSARY !!!! NEEDS TO BE RETESTED !!!!
     // Handle browser back/forward navigation
-    window.addEventListener('popstate', function (event) {
-        const path = event.state ? event.state.path : null;
-        if (!path || path === './welcome.html') {
-            welcomeScreen.classList.remove('shrunk');
-            mainContent.classList.remove('expanded');
-            iframe.src = './welcome.html';
-        } else {
-            welcomeScreen.classList.add('shrunk');
-            mainContent.classList.add('expanded');
-            iframe.src = path;
-        }
-    });
 
-    // Initial page load check
-    const initialPath = window.location.pathname.split('/').pop();
-    if (initialPath && initialPath !== 'index.html' && initialPath !== '') {
-        welcomeScreen.classList.add('shrunk');
-        mainContent.classList.add('expanded');
-        iframe.src = initialPath;
-    }
 });
