@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('popstate', function (event) {
         welcomeScreen.classList.remove('shrunk');
         mainContent.classList.remove('expanded');
-        iframe.src = '';
+        window.location.replace('index.html');
     });
 
     // Initial page load check
