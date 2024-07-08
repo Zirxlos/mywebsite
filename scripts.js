@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log('Link clicked:', target);
 
         // Update URL without reloading the page
-        history.pushState({ path: target }, '', target);
+        history.pushState({path: target}, '', target);
 
         // Call the same logic as the popstate event handler
         updateUI(target);
