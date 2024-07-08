@@ -142,6 +142,10 @@ iframe {
     position: absolute;
 }
 
+.journey {
+    text-align: left;
+}
+
 @media (max-width: 1000px) {
     main {
         padding: 2em;
