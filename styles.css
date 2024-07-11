@@ -68,7 +68,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: width 0.5s, height 0.5s;
+    transition: 0.5s;
     z-index: 10;
     /* Ensure welcome screen is above main content */
 }
@@ -77,8 +77,8 @@ p {
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - 250px);
-    /* Adjust width to account for navbar */
+    width: calc(100% - 300px);
+    /* Adjust width for animation */
     height: 100%;
     overflow: hidden;
     display: flex;
@@ -86,7 +86,7 @@ p {
     align-items: center;
     background: #fff;
     /* Optional: Set background color */
-    transition: width 0.5s, height 0.5s;
+    transition: 0.5s;
     z-index: 5;
     /* Ensure main content is below welcome screen */
 }
@@ -125,10 +125,6 @@ p {
     width: 300px !important;
 }
 
-.expanded {
-    width: calc(100% - 300px) !important;
-}
-
 iframe {
     width: 100%;
     height: 100%;
@@ -151,9 +147,13 @@ iframe {
         padding: 2em;
         }
 
+    #main-content {
+        width: 100%;
+    }
+
     .shrunk {
         visibility: collapse;
-        width: -100px !important;
+        width: 0px !important;
     }
 
     #burger {
@@ -171,14 +171,15 @@ iframe {
     #burger:hover {
         cursor: pointer;
     }
-
-    .expanded {
-        width: 100% !important;
-    }
     
     .profile-pic {
         width: 50%;
-        height: auto;
+        height: 50%;
+    }
+
+    .ghost {
+        opacity: 0.0;
+        transition: 0.3s;
     }
     
     .project {

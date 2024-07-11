@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll('.nav-link');
     const welcomeScreen = document.getElementById('welcome-screen');
-    const mainContent = document.getElementById('main-content');
+    const contentCenter = document.getElementById('content-center');
     const iframe = document.getElementById('content-frame');
     const burger = document.getElementById('burger');
 
@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log('updateUI called with path:', path);
         if (!path || path === 'index.html') {
             welcomeScreen.classList.remove('shrunk');
-            mainContent.classList.remove('expanded');
+            contentCenter.classList.remove('ghost');
             iframe.src = 'welcome.html';
         } else {
             welcomeScreen.classList.add('shrunk');
-            mainContent.classList.add('expanded');
+            contentCenter.classList.add('ghost');
             iframe.src = path;
         }
         console.log('UI updated. welcomeScreen classes:', welcomeScreen.classList, 'mainContent classes:', mainContent.classList, 'iframe src:', iframe.src);
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     burger.addEventListener('click', function (event) {
         welcomeScreen.classList.remove('shrunk');
-        mainContent.classList.remove('expanded');
+        contentCenter.classList.remove('ghost');
         console.log('Burger clicked. welcomeScreen classes:', welcomeScreen.classList, 'mainContent classes:', mainContent.classList, 'iframe src:', iframe.src);
     })
 
