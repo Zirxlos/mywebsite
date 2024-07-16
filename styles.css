@@ -146,6 +146,10 @@ iframe {
     text-align: left;
 }
 
+.project {
+    padding: 1em 1em 0 1em;
+}
+
 @media (max-width: 1000px) {
     main {
         padding: 2em;
@@ -186,8 +190,4 @@ iframe {
         transition: 0.3s;
     }
     
-    .project {
-        width: 100%;
-        height: auto;
-    }
 }
