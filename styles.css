@@ -31,6 +31,10 @@ h2 {
     
 }
 
+.welcome {
+    text-align: left;
+}
+
 h3 {
     padding-top: 30px;
 }
